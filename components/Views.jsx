@@ -23,7 +23,7 @@ const Views = () => {
 
   return (
     <div>
-      <h2 className='py-2 mb-2'>View Appointments</h2>
+      <h2 className='py-2 mb-2 text-center'>View Appointments</h2>
       <section className="text-gray-600 body-font">
         <div className="container mx-auto">
           {data.appointments?.map((d, i) => <Appoint key={i} data={d} />)}
@@ -49,7 +49,7 @@ const Appoint = ({ data }) => {
       </div>
       <Panel header="Show Sectors" key="1">
         <ul>
-          {data.sectors.map((s, i) => <li key={i}>{s.label}</li>)}
+          {data.sectors.map((s, i) => <li className='border-b max-w-max' key={i}> {s.value}- {s.label}</li>)}
         </ul>
       </Panel>
     </Collapse>

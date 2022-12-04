@@ -26,7 +26,7 @@ const Sectors = ({ values, setValues }) => {
 
   const selectProps = {
     mode: 'multiple',
-    style: { width: '100%', minWidth: '300px' },
+    style: { width: '100%', minWidth: '200px' },
     values,
     options: sectors,
     onChange: (newValue) => {

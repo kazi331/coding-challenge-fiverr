@@ -57,7 +57,7 @@ const AppoinmentForm = () => {
   return (
     <>
       <section className="text-gray-600 body-font sticky top-16 ">
-        <div className="container px-5 mx-auto flex sm:flex-nowrap flex-wrap">
+        <div className="container lg:px-5 mx-auto flex sm:flex-nowrap flex-wrap">
           <form  onSubmit={handleSubmit} className="bg-white flex flex-col md:ml-auto w-full md:py-4 mt-2 md:mt-0">
             <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Appointment</h2>
             <p className="leading-relaxed mb-5 text-gray-600">Please enter your name and pick the Sectors you are currently involved in. </p>

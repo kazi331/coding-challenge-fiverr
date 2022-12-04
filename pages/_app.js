@@ -25,9 +25,9 @@ function MyApp({ Component, pageProps }) {
       </header>
 
       {/* content  */}
-      <Content className="site-layout" style={{ padding: '0 50px', marginTop: 40, minHeight: '65vh' }}>
+      <div className="p-2 md:p-4 lg:p-10 mt-4" >
         <Component {...pageProps} />
-      </Content>
+      </div>
 
       {/* footer  */}
       <footer>
