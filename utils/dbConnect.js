@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const { MongoClient } = require('mongodb');
 
-const dbURI = `mongodb+srv://smoothies:plVBrcdbOPvFVfP3@cluster0.oxxl7li.mongodb.net/`
+const dbURI = process.env.DB_URI
 
 // mongoose connection
 const mongooseConnection = () => {

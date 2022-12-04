@@ -24,8 +24,8 @@ const Views = () => {
   return (
     <div>
       <h2 className='py-2 mb-2'>View Appointments</h2>
-      <section class="text-gray-600 body-font">
-        <div class="container mx-auto">
+      <section className="text-gray-600 body-font">
+        <div className="container mx-auto">
           {data.appointments?.map((d, i) => <Appoint key={i} data={d} />)}
         </div>
       </section >
@@ -38,11 +38,11 @@ export default Views
 const Appoint = ({ data }) => {
   return (
     <Collapse defaultActiveKey={['1']} className="my-2" >
-      <div class="w-full">
-        <div class="h-full flex items-center p-4 py-2 pb-0 rounded-lg">
-          <div class="flex-grow">
+      <div className="w-full">
+        <div className="h-full flex items-center p-4 py-2 pb-0 rounded-lg">
+          <div className="flex-grow">
             <Badge dot status='success' >
-              <h2 class="text-gray-900 title-font font-medium">{data.name}</h2>
+              <h2 className="text-gray-900 title-font font-medium">{data.name}</h2>
             </Badge>
           </div>
         </div>

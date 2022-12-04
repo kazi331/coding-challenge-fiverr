@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb'
 
-const uri = 'mongodb+srv://smoothies:plVBrcdbOPvFVfP3@cluster0.oxxl7li.mongodb.net/'
+const uri = process.env.DB_URI
 const options = { useUnifiedTopology: true, useNewUrlParser: true, }
 
 let client
