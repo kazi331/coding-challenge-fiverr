@@ -5,7 +5,7 @@ import React from 'react';
 const menuItems = [
   { key: 1, href: '/', label: 'Home' },
   { key: 2, href: '/appointment', label: 'Appointment' },
-  { key: 3, href: '/views', label: 'Views' },
+  { key: 3, href: '/view', label: 'View' },
 ]
 
 const Layout = ({ children }) => {
