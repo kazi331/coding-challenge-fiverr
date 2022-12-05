@@ -1,10 +1,8 @@
-import { Layout } from 'antd';
 import Head from 'next/head';
 import AppointmentForm from '../components/Appoinment';
-import Views from '../components/Views'
+import Views from '../components/Views';
 
 export default function Home() {
-
   return (
     <>
       <Head>
