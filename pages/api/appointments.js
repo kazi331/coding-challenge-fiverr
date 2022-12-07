@@ -5,7 +5,6 @@ export default async function handler(req, res) {
   const db = client.db("coding-challenge");
   switch (req.method) {
     case "POST":
-      // let bodyObject = JSON.parse(req.body);
       let result = await db.collection("appointments").insertOne(req.body);
       res.json(result);
       break;

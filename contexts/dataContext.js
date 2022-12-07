@@ -11,27 +11,29 @@ const DataProvider = ({ children }) => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false);
   const [refetch, setRefetch] = useState(false)
+  const [dataError, setDataError] = useState(false)
 
   // load data on page load
   useEffect(() => {
-    console.log('fetching data...')
     const fetchData = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('/api/appointments');
+        const res = await axios.get('/api/getappointments');
         const data = res.data;
+        setDataError(false)
         setData(data.appointments)
         setLoading(false)
       } catch (error) {
         setLoading(false)
-        console.log(error)
+        setDataError(true)
+        console.log({ error })
       }
     }
     fetchData();
   }, [refetch])
 
   return (
-    <DataContext.Provider value={{ data, loading, refetch, setRefetch }}>
+    <DataContext.Provider value={{ data, loading, refetch, setRefetch, dataError }}>
       {children}
     </DataContext.Provider>
   )

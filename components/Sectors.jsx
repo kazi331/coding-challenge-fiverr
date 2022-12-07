@@ -12,7 +12,7 @@ const Sectors = ({ values, setValues }) => {
     const fetchData = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('/api/sector')
+        const res = await axios.get('/api/getsectors')
         setSectors(res.data.sectors)
         setLoading(false)
       } catch (err) {
@@ -37,20 +37,7 @@ const Sectors = ({ values, setValues }) => {
   };
 
 
-  return (
-    <Select
-      required
-      labelInValue
-      loading={loading}
-      showArrow
-      // showSearch
-      // placeholder="Search to Select"
-      // optionFilterProp="children"
-      // filterOption={(input, option) => (option?.label ?? '').includes(input)}
-      // filterSort={(optionA, optionB) =>(optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())}
-      {...selectProps}
-    />
-  )
+  return <Select required labelInValue loading={loading} showArrow {...selectProps} />
 };
 
 export default Sectors;
