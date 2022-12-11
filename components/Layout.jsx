@@ -30,10 +30,10 @@ const Layout = ({ children }) => {
       </div>
 
       {/* footer  */}
-      <footer className='sticky bottom-0 -z-10'>
+      <footer className=''>
         <p className='text-center bg-gray-100 dark:bg-gray-900 dark:text-gray-200 py-10 pt-10 '>
           Copyright &copy; 2022 | Made by
-          <Link href="https://github.com/kazi331" className='text-green-600' title='Kazi On Github'> Kazi</Link>
+          <Link href="https://github.com/kazi331" target="_blank" className='text-green-600' title='Kazi On Github'> Kazi</Link>
         </p>
       </footer>
     </>
