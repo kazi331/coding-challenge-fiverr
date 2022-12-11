@@ -9,6 +9,7 @@ const AppoinmentForm = () => {
   const [agree, setAgree] = useState(false);
   const [values, setValues] = useState([]);
   const [err, setErr] = useState('');
+  const [loading, setLoading] = useState(false)
 
   // get setRefetch from data context
   const { refetch, setRefetch } = useData();
@@ -19,6 +20,7 @@ const AppoinmentForm = () => {
     const name = e.target.name.value;
     if (values.length >= 1) {
       setErr('')
+      setLoading(true)
       // Save to database
       try {
         const res = await axios.post('/api/appointments', { name, agree, sectors: values });
@@ -26,9 +28,11 @@ const AppoinmentForm = () => {
           openNotificationWithIcon('success', name);
           e.target.reset();
           setRefetch(!refetch)
+          setLoading(false)
         }
       } catch (err) {
         console.log(err)
+        setLoading(false)
       }
     } else {
       setErr('Please select at least one sector.')
@@ -70,7 +74,7 @@ const AppoinmentForm = () => {
               onChange={() => setAgree(!agree)}>
               Agree to terms
             </Checkbox>
-            <button className="form-button">Save</button>
+            <button disabled={loading} className="form-button">{loading? 'Saving...' : 'Save'}</button>
           </form>
         </div>
       </section>
