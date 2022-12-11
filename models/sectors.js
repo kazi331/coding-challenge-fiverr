@@ -10,7 +10,7 @@ const sectorSchema = new mongoose.Schema({
   ]
 })
 
-// const Sector = mongoose.model('Sector', sectorSchema)
-const Sector = mongoose.models.Sector || mongoose.model('Sector', sectorSchema)
+// const Sector = mongoose.model('Sector', sectorSchema) // contains override error
+const Sector = mongoose.models.Sector || mongoose.model('Sector', sectorSchema) // fixed override error
 
 export default Sector;

@@ -12,6 +12,7 @@ const appointmentSchema = new mongoose.Schema({
   ]
 })
 
-const Appointment = mongoose.models.Appointment || mongoose.model('Appointment', appointmentSchema);
+// const Appointment = mongoose.model('Appointment', appointmentSchema); // contains override errors
+const Appointment = mongoose.models.Appointment || mongoose.model('Appointment', appointmentSchema); // fixed 
 
 export default Appointment;

@@ -19,12 +19,10 @@ const AppoinmentForm = () => {
     const name = e.target.name.value;
     if (values.length >= 1) {
       setErr('')
-      const response = { name, agree, sectors: values }
       // Save to database
       try {
-        const res = await axios.post('/api/sector', response);
-        const data = await res.data;
-        if (data.insertedId) {
+        const res = await axios.post('/api/appointments', { name, agree, sectors: values });
+        if (res.data.status === 'success') {
           openNotificationWithIcon('success', name);
           e.target.reset();
           setRefetch(!refetch)

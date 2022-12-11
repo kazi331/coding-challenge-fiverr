@@ -4,8 +4,7 @@ import Title from './Title';
 const { Panel } = Collapse;
 
 const Views = () => {
-  const { data, loading, dataError} = useData();
-  
+  const { data, loading, dataError } = useData();
   return (
     <>
       <h2 className='py-2 mb-2 text-center'>Appointments ({data?.length})</h2>
@@ -15,13 +14,11 @@ const Views = () => {
         <div className="text-gray-600 body-font">
           <div className="container mx-auto">
             <Collapse accordion >
-              {data?.map(appointment => (
-                <Panel header={<Title name={appointment.name} id={appointment._id} />} key={appointment._id}>
-                  <ul>
-                    {appointment?.sectors?.map((s, i) => <li key={i}>{s.value}- {s.label}</li>)}
-                  </ul>
+              {data?.map(appointment => {
+                return <Panel header={<Title name={appointment.name} id={appointment._id} />} key={appointment._id}>
+                  {appointment?.sectors?.map((s, i) => <li key={i}>{s.value}- {s.label}</li>)}
                 </Panel>
-              )
+              }
               )}
             </Collapse>
 

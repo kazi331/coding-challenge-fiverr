@@ -7,7 +7,6 @@ export default async function handler(req, res) {
     const sectors = await Sector.find();
     res.json({ sectors })
   } catch (err) {
-    console.log(err);
+    console.log({ err })
   }
-
 }

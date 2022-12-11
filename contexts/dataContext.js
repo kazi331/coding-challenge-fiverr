@@ -18,7 +18,7 @@ const DataProvider = ({ children }) => {
     const fetchData = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('/api/getappointments');
+        const res = await axios.get('/api/appointments');
         const data = res.data;
         setDataError(false)
         setData(data.appointments)

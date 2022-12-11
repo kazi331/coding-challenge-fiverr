@@ -12,7 +12,7 @@ const Sectors = ({ values, setValues }) => {
     const fetchData = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('/api/getsectors')
+        const res = await axios.get('/api/sectors')
         setSectors(res.data.sectors)
         setLoading(false)
       } catch (err) {
