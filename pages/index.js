@@ -12,10 +12,10 @@ export default function Home() {
       </Head>
       <main>
         <div className="flex flex-col lg:flex-row gap-4 w-full">
-          <div className="border w-full p-4">
+          <div className="border w-full dark:border-gray-600 p-4 dark:bg-gray-700 dark:text-gray-200">
             <AppointmentForm />
           </div>
-          <div className="border w-full p-4">
+          <div className="border dark:border-gray-600 w-full p-4 dark:bg-gray-700 dark:text-gray-200">
             <Views />
           </div>
         </div>

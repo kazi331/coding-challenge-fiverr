@@ -11,12 +11,12 @@ const Views = () => {
       <Skeleton loading={loading} />
       {dataError && <h2 className='text-center text-red-600'>Data loading Error!!</h2>}
       {data?.length === 0 ? <h2 className='py-4 text-center'>No Data found</h2> :
-        <div className="text-gray-600 body-font">
+        <div className="text-gray-600 dark:text-gray-200 body-font">
           <div className="container mx-auto">
-            <Collapse accordion >
+            <Collapse accordion className='dark:border-gray-600' >
               {data?.map(appointment => {
                 return <Panel header={<Title name={appointment.name} id={appointment._id} />} key={appointment._id}>
-                  {appointment?.sectors?.map((s, i) => <li key={i}>{s.value}- {s.label}</li>)}
+                  <ul>{appointment?.sectors?.map((s, i) => <li key={i}>{s.value}- {s.label}</li>)}</ul>
                 </Panel>
               }
               )}

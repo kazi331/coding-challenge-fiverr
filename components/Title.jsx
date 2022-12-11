@@ -14,9 +14,9 @@ const Title = ({ name, id }) => {
     }
   };
   return (
-    <div className='flex items-center justify-between'>
-      <div className='relative inline-block'>
-        <h2 className="text-gray-900 title-font font-medium">{name}</h2>
+    <div className='flex items-center justify-between dark:text-gray-200 '>
+      <div className='relative'>
+        <h2 className="title-font font-medium">{name}</h2>
         <Badge dot status='success' className='absolute -right-2 -top-2' />
       </div>
       {/* // delete button  */}
