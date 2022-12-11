@@ -55,7 +55,7 @@ const AppoinmentForm = () => {
 
   return (
     <>
-      <section className="body-font sticky top-16 ">
+      <section className="body-font sticky top-16">
         <div className="container lg:px-5 mx-auto flex sm:flex-nowrap flex-wrap">
           <form onSubmit={handleSubmit} className="flex flex-col md:ml-auto w-full md:py-4 mt-2 md:mt-0">
             <h2 className="text-lg mb-1 font-medium title-font">Appointment</h2>
@@ -75,7 +75,7 @@ const AppoinmentForm = () => {
               onChange={() => setAgree(!agree)}>
               Agree to terms of service and privacy policy
             </Checkbox>
-            <button disabled={loading} className="form-button">{loading? 'Saving...' : 'Save'}</button>
+            <button disabled={loading} className="form-button mt-6">{loading? 'Saving...' : 'Save'}</button>
           </form>
         </div>
       </section>
